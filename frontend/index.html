@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✨ Todo App - Gestor de Tareas</title>
+    <link rel="stylesheet" href="src/styles/main.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ Todo App</h1>
+            <p>Organiza tu vida, una tarea a la vez</p>
+        </header>
+
+        <div class="add-task-section">
+            <input 
+                type="text" 
+                id="taskInput" 
+                placeholder="🎯 ¿Qué necesitas hacer hoy?" 
+                maxlength="255"
+            >
+            <button id="addTaskBtn" disabled>➕ Agregar Tarea</button>
+        </div>
+
+        <div class="stats">
+            <span id="totalTasks">Total: 0</span>
+            <span id="completedTasks">✅ Completadas: 0</span>
+            <span id="pendingTasks">⏳ Pendientes: 0</span>
+        </div>
+
+        <div class="tasks-section">
+            <h2>📝 Mis Tareas</h2>
+            <div id="tasksList" class="tasks-list">
+                <!-- Las tareas se cargarán aquí dinámicamente -->
+            </div>
+        </div>
+
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+    </div>
+
+    <script type="module" src="src/app.js"></script>
+</body>
+</html>
